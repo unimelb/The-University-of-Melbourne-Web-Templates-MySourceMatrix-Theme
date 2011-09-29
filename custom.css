@@ -1,7 +1,11 @@
-/* use the body class customisation to set your own background image
-body.yourclass {
-	background:url("path/to/your/background/image.jpg");
-	background-position: 50% 0;
-	background-repeat: no-repeat;
-	}
-*/
+/*  Used to manage your own custom styles  */
+
+/*  Used to manage your own mobile styles  */
+/*  iPhone-horizontal */
+@media screen and (max-width: 630px) {
+
+}
+/*  iPhone-vertical */
+@media screen and (max-width: 480px) {
+
+}
