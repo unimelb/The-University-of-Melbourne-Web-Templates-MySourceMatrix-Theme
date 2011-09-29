@@ -1,0 +1,7 @@
+/* use the body class customisation to set your own background image
+body.yourclass {
+	background:url("path/to/your/background/image.jpg");
+	background-position: 50% 0;
+	background-repeat: no-repeat;
+	}
+*/
