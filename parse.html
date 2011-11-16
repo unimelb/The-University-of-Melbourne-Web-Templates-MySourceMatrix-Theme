@@ -36,8 +36,11 @@
     <MySource_AREA id_name="head" design_area="head" />
     <!-- SITE-SPECIFIC RESOURCES -->
     <link rel="stylesheet" type="text/css" href="mysource_files/custom.css" />
+
+
     <!-- HEAD EXTRAS : additional scripts and css -->
     <MySource_AREA id_name="head_extras" design_area="nest_content" cache="1"><MySource_SET name="type_codes" value="page" /></MySource_AREA>
+    <MySource_AREA id_name="side_bar_extras" design_area="nest_content" cache="1" print="no"><MySource_SET name="type_codes" value="page" /></MySource_AREA>
     <!-- /HEAD EXTRAS -->
     <!-- /SITE-SPECIFIC RESOURCES -->
     
@@ -117,7 +120,7 @@
             </ul>
         </div><!-- /navigation -->
         <hr>
-        <MySource_AREA id_name="side_bar_extras" design_area="nest_content" cache="1"><MySource_SET name="type_codes" value="page" /></MySource_AREA>
+        <MySource_PRINT id_name="side_bar_extras" />
     </div><!-- /sidebar -->
     <hr>
 </MySource_AREA>
