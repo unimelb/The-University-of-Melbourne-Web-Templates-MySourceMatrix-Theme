@@ -35,8 +35,12 @@
     
     <MySource_AREA id_name="head" design_area="head" />
     <!-- SITE-SPECIFIC RESOURCES -->
-    <link rel="stylesheet" type="text/css" href="mysource_files/custom.css" />
-
+	<MySource_AREA id_name="custom_css" design_area="linked_css" print="no">
+		<MySource_SET name="tag_type" value="link_tag" /> 
+		<MySource_SET name="media" value="all" />
+	</MySource_AREA>
+	<link rel="stylesheet" type="text/css" href="mysource_files/custom.css" />
+    
     <!-- HEAD EXTRAS : additional scripts and css -->
     <MySource_AREA id_name="head_extras" design_area="nest_content" cache="1"><MySource_SET name="type_codes" value="page" /></MySource_AREA>
     <!-- /HEAD EXTRAS -->
@@ -61,8 +65,8 @@
 
 <!-- Breadcrumbs -->
 
-<div id="breadcrumbs">
- <a href="<MySource_PRINT id_name='__global__' var='site_link' full_url='true'/>"><MySource_PRINT id_name="__global__" var="site_name" /></a>
+<div id="breadcrumbs" role="navigation">
+ <a href="<MySource_PRINT id_name='__global__' var='site_link' full_url='true'/>" rel="home"><MySource_PRINT id_name="__global__" var="site_name" /></a>
  <MySource_AREA id_name="page_lineage" design_area="asset_lineage">
  <MySource_SET name="levels_to_print" value="0" />
  <MySource_SET name="prefix_with_home_link" value="false" />
@@ -70,7 +74,7 @@
  <MySource_SET name="prefix_with_divider" value="true" />
  <MySource_SET name="suffix_with_divider" value="false" />
  <MySource_SET name="show_hidden_links" value="false" />
- <MySource_DIVIDER><span class="divider">&rsaquo;</span></MySource_DIVIDER>
+ <MySource_DIVIDER> <span class="divider">&rsaquo;</span></MySource_DIVIDER> 
  <MySource_ASSET>
  <a href="<MySource_PRINT var='asset_link' />"><MySource_PRINT var='asset_short_name' /></a>
  </MySource_ASSET>
