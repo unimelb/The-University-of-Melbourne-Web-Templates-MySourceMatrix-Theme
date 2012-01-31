@@ -26,6 +26,7 @@
     <!-- In simple edit mode, load an extra 'reset' CSS to fix problems
     caused by template styles and disable the injection javascript -->
     <link rel="stylesheet" type="text/css" href="//a1.unimelb.edu.au/css/matrix/simple_edit_2011.css" />
+    
     </MySource_THEN>
     <MySource_ELSE>
     <script src="//brand.unimelb.edu.au/global-header/js/injection.js"></script>
@@ -42,10 +43,10 @@
 	<link rel="stylesheet" type="text/css" href="mysource_files/custom.css" />
     
     <!-- HEAD EXTRAS : additional scripts and css -->
-    <MySource_AREA id_name="head_extras" design_area="nest_content" cache="1"><MySource_SET name="type_codes" value="page" /></MySource_AREA>
+    <MySource_AREA id_name="head_extras" design_area="nest_content" ><MySource_SET name="type_codes" value="page" /></MySource_AREA>
     <!-- /HEAD EXTRAS -->
-    <MySource_AREA id_name="side_bar_before" design_area="nest_content" cache="1" print="no"><MySource_SET name="type_codes" value="page" /></MySource_AREA>
-    <MySource_AREA id_name="side_bar_after" design_area="nest_content" cache="1" print="no"><MySource_SET name="type_codes" value="page" /></MySource_AREA>
+    <MySource_AREA id_name="side_bar_before" design_area="nest_content"  print="no"><MySource_SET name="type_codes" value="page" /></MySource_AREA>
+    <MySource_AREA id_name="side_bar_after" design_area="nest_content"  print="no"><MySource_SET name="type_codes" value="page" /></MySource_AREA>
 
     <!-- /SITE-SPECIFIC RESOURCES -->
     
@@ -58,7 +59,7 @@
 <div class="wrapper">
     <div class="header">
         <div class="hgroup">
-            <MySource_AREA id_name="branding_space" design_area="nest_content" cache="1"><MySource_SET name="type_codes" value="page" /></MySource_AREA>
+            <MySource_AREA id_name="branding_space" design_area="nest_content" ><MySource_SET name="type_codes" value="page" /></MySource_AREA>
         </div>
         <hr>
     </div>
@@ -92,7 +93,6 @@
     
 <MySource_AREA id_name="standard_menu" design_area="menu_normal"> 
 <MySource_SET name="level" value="top" /> 
-<MySource_SET name="show_subs" value="always" />
 <!-- set navigation to ignore a range of asset types -->
 <MySource_SET name="unwanted_asset_types" value="image, news_item, calendar_event, file" />
 <MySource_SET name="settings.class.normal" value="" />
@@ -108,7 +108,7 @@
           <MySource_ASSET> 
           <li class="<MySource_PRINT var="settings.class" />"><a href="<MySource_PRINT var='asset_link' />"> <MySource_PRINT var="asset_short_name" /> </a> 
               <MySource_SUB design_area="menu_normal"> 
-              <MySource_SET name="show_subs" value="on_current" />
+              
               <MySource_SET name="settings.class.normal" value="" />
               <MySource_SET name="settings.class.current" value="current" />
               <MySource_SET name="settings.class.hierarchy" value="hierarchy" />
@@ -116,7 +116,7 @@
               <MySource_ASSET> 
               <li class="<MySource_PRINT var="settings.class" />"><a href="<MySource_PRINT var='asset_link' />"> <MySource_PRINT var="asset_short_name" /> </a> 
                   <MySource_SUB design_area="menu_normal">
-                  <MySource_SET name="show_subs" value="on_current" /> 
+                   
                   <MySource_SET name="settings.class.normal" value="" />
                   <MySource_SET name="settings.class.current" value="current" />
                   <MySource_SET name="settings.class.hierarchy" value="hierarchy" />
@@ -158,7 +158,7 @@
     <div id="local" class="wrapper">
         <p class="footertitle"><MySource_PRINT id_name="__global__" var="site_name" /></p>
 
-<MySource_AREA id_name="footer_extras" design_area="nest_content" cache="1"><MySource_SET name="type_codes" value="page" /></MySource_AREA>
+<MySource_AREA id_name="footer_extras" design_area="nest_content" ><MySource_SET name="type_codes" value="page" /></MySource_AREA>
 
       <MySource_AREA id_name="simple_edit_footer" design_area="show_if">
           <MySource_SET name="condition"  value="simple_edit_mode" />
@@ -169,7 +169,7 @@
             <li><strong>Maintainer:</strong><br>%asset_metadata_UM.Maintainer.Name%</li>
         </ul>
         
-        <MySource_AREA id_name="footer" design_area="nest_content" cache="1"><MySource_SET name="type_codes" value="page" /></MySource_AREA>
+        <MySource_AREA id_name="footer" design_area="nest_content" ><MySource_SET name="type_codes" value="page" /></MySource_AREA>
         <ul class="col-2">
             <li><strong>Date created:</strong><br>
             %asset_created_j% %asset_created_F% %asset_created_Y%</li>
@@ -181,6 +181,6 @@
       </MySource_AREA>
     </div><!-- /local -->
 </div><!-- /footer -->
-<MySource_AREA id_name="after_body" design_area="nest_content" cache="1"><MySource_SET name="type_codes" value="page" /></MySource_AREA>
+<MySource_AREA id_name="after_body" design_area="nest_content" ><MySource_SET name="type_codes" value="page" /></MySource_AREA>
 </body>
 </html>
