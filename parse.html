@@ -92,16 +92,16 @@
         <MySource_AREA id_name="body" design_area="body" />
     </div><!-- /main-content -->
     
-<MySource_AREA id_name="standard_menu" design_area="menu_normal"> 
-<MySource_SET name="level" value="top" /> 
-<!-- set navigation to ignore a range of asset types -->
-<MySource_SET name="unwanted_asset_types" value="image, news_item, calendar_event, file" />
-<MySource_SET name="settings.class.normal" value="" />
-<MySource_SET name="settings.class.current" value="current" />
-<MySource_SET name="settings.class.hierarchy" value="hierarchy" />
-
-    <div class="col-2"><!-- sidebar -->
-        <MySource_PRINT id_name="side_bar_before" />
+	<div class="col-2"><!-- sidebar -->
+	<MySource_PRINT id_name="side_bar_before" />
+    
+	<MySource_AREA id_name="standard_menu" design_area="menu_normal"> 
+	<MySource_SET name="level" value="top" /> 
+	<!-- set navigation to ignore a range of asset types -->
+	<MySource_SET name="unwanted_asset_types" value="image, news_item, calendar_event, file" />
+	<MySource_SET name="settings.class.normal" value="" />
+	<MySource_SET name="settings.class.current" value="current" />
+	<MySource_SET name="settings.class.hierarchy" value="hierarchy" />
     
         <div class="nav first" role="navigation">
             <h2>Navigation</h2>
@@ -148,10 +148,11 @@
             </ul>
         </div><!-- /navigation -->
         <hr>
+        </MySource_AREA>
+        
         <MySource_PRINT id_name="side_bar_after" />
     </div><!-- /sidebar -->
     <hr>
-</MySource_AREA>
 
 </div><!-- /wrapper -->
 <hr>
