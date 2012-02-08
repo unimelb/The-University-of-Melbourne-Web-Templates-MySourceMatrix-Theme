@@ -53,6 +53,7 @@
     <MySource_AREA id_name="template_vars" design_area="declared_vars" print="no">
     <MySource_DECLARE name="body_class" value="no-logo blue" type="text" description="Classes that are added to the body tag to control header images etc."/>
     <MySource_DECLARE name="content_width" value="col-6" type="text" description="The width, in columns, of the main content area."/>
+    <MySource_DECLARE name="main_content_class" value="main" type="text" description="The class applied to the main content area."/>
     </MySource_AREA>
 </head>
 <body class="<MySource_PRINT id_name='template_vars' var='body_class' />">
@@ -84,23 +85,23 @@
 
 <!-- End breadcrumbs -->
 
-    <div class='main <MySource_PRINT id_name="template_vars" var="content_width" />' id='main-content' role='main'>
+    <div class='<MySource_PRINT id_name="template_vars" var="main_content_class" /> <MySource_PRINT id_name="template_vars" var="content_width" />' id='main-content' role='main'>
     <MySource_AREA id_name="auto_heading" design_area="asset_lineage">
         <h1><MySource_PRINT id_name="__global__" var="asset_name" /></h1>
     </MySource_AREA>
         <MySource_AREA id_name="body" design_area="body" />
     </div><!-- /main-content -->
     
-<MySource_AREA id_name="standard_menu" design_area="menu_normal"> 
-<MySource_SET name="level" value="top" /> 
-<!-- set navigation to ignore a range of asset types -->
-<MySource_SET name="unwanted_asset_types" value="image, news_item, calendar_event, file" />
-<MySource_SET name="settings.class.normal" value="" />
-<MySource_SET name="settings.class.current" value="current" />
-<MySource_SET name="settings.class.hierarchy" value="hierarchy" />
-
-    <div class="col-2"><!-- sidebar -->
-        <MySource_PRINT id_name="side_bar_before" />
+	<div class="col-2"><!-- sidebar -->
+	<MySource_PRINT id_name="side_bar_before" />
+    
+	<MySource_AREA id_name="standard_menu" design_area="menu_normal"> 
+	<MySource_SET name="level" value="top" /> 
+	<!-- set navigation to ignore a range of asset types -->
+	<MySource_SET name="unwanted_asset_types" value="image, news_item, calendar_event, file" />
+	<MySource_SET name="settings.class.normal" value="" />
+	<MySource_SET name="settings.class.current" value="current" />
+	<MySource_SET name="settings.class.hierarchy" value="hierarchy" />
     
         <div class="nav first" role="navigation">
             <h2>Navigation</h2>
@@ -145,12 +146,13 @@
           </MySource_ASSET> 
 
             </ul>
-        </div><!-- /navigation -->
+        </div>
         <hr>
+        </MySource_AREA><!-- /navigation -->
+        
         <MySource_PRINT id_name="side_bar_after" />
     </div><!-- /sidebar -->
     <hr>
-</MySource_AREA>
 
 </div><!-- /wrapper -->
 <hr>
@@ -165,7 +167,7 @@
           <MySource_ELSE>
 
         <ul class="col-2">
-            <li><strong>Authoriser:</strong><br>%asset_metadata_UM.Authoriser.Title%</li>
+            <li><strong>Authoriser:</strong><br>%asset_metadata_UM.Authoriser.Title%, %asset_metadata_UM.Organisational.Unit%</li>
             <li><strong>Maintainer:</strong><br>%asset_metadata_UM.Maintainer.Name%</li>
         </ul>
         
