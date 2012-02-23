@@ -158,6 +158,7 @@
 <div class="footer">
     <div id="local" class="wrapper">
         <p class="footertitle"><MySource_PRINT id_name="__global__" var="site_name" /></p>
+        <MySource_AREA id_name="footer" design_area="nest_content" print="no"><MySource_SET name="type_codes" value="page" /></MySource_AREA>
 
 <MySource_AREA id_name="footer_extras" design_area="nest_content" ><MySource_SET name="type_codes" value="page" /></MySource_AREA>
 
@@ -169,8 +170,8 @@
             <li><strong>Authoriser:</strong><br>%asset_metadata_UM.Authoriser.Title%</li>
             <li><strong>Maintainer:</strong><br>%asset_metadata_UM.Maintainer.Name%</li>
         </ul>
+        <MySource_PRINT id_name="footer" />
         
-        <MySource_AREA id_name="footer" design_area="nest_content" ><MySource_SET name="type_codes" value="page" /></MySource_AREA>
         <ul class="col-2">
             <li><strong>Date created:</strong><br>
             %asset_created_j% %asset_created_F% %asset_created_Y%</li>
